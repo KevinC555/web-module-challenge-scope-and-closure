@@ -28,11 +28,11 @@ console.log(processFirstItem(['foo', 'bar'], function (str) { return str + str }
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
-  
+  I think one of the biggest differences is that counter1 is function scoped, and the other is global scoped.
   2. Which of the two uses a closure? How can you tell?
-  
-  3. In what scenario would the counter1 code be preferable? In what scenario would 
-	 counter2 be better?  
+I think the counter1 uses a closure because once the code finishes the code closes, whereas in counter2 it has to leave itself open to go outside of the function to reference something globally.
+  3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better?  
+  Counterr 1 would be better when using functions internally and counter2 when using them with gloablly stored variables that can be used more than once.
 */
 
 // counter1 code
@@ -62,8 +62,8 @@ Use the inning function below to do the following:
 NOTE: This will be a callback function for the tasks below
 */
 
-function inning(/*Code Here*/) {
-	/*Code Here*/
+function inning(num) {
+	return Math.floor(Math.random() * Math.floor(3));
 }
 
 
@@ -81,8 +81,8 @@ Use the finalScore function below to do the following:
 }
 */
 
-function finalScore(/*code Here*/) {
-	/*Code Here*/
+function finalScore(inning, number) {
+
 }
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
